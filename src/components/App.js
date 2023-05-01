@@ -1,5 +1,7 @@
-import { Banner } from './Banner';
-import { Cart } from './Cart';
+import {Banner} from './Banner';
+import '../styles/banner.css'
+import {Cart} from './Cart';
+import { ShoppingList } from './ShoppingList';
 
 
 function App() {
@@ -7,6 +9,7 @@ function App() {
     <div className="App">
       <Banner />
       <Cart />
+      <ShoppingList />
     </div>
   );
 }
