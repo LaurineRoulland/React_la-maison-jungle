@@ -1,5 +1,4 @@
 import { Banner } from './Banner'
-import '../styles/banner.css'
 import { Cart } from './Cart'
 import { ShoppingList } from './ShoppingList'
 
