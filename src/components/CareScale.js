@@ -9,9 +9,18 @@ export const CareScale = ({ scaleValue, careType }) => {
         ) : (
             <img src={water} alt="water-icon" />
         )
+    const quantity = { 1: 'peu', 2: 'modérément', 3: 'beaucoup' }
+
+    function handleClick() {
+        alert(
+            `Cette plante recquiert ${quantity[scaleValue]} ${
+                careType === 'light' ? 'de lumière' : "d'arrosage"
+            }`
+        )
+    }
 
     return (
-        <div>
+        <div onClick={handleClick}>
             {range.map((rangeElement) =>
                 scaleValue >= rangeElement ? (
                     <span key={rangeElement.toString()}>{scaleType}</span>
