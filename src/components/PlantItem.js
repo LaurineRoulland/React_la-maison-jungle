@@ -1,18 +1,14 @@
 import { CareScale } from './CareScale'
 import '../styles/plantItem.css'
 
-export const PlantItem = ({ name, cover, id, light, water }) => {
-
-    // const handleClick = (plantName) => {
-    //     alert(`Vous voulez acheter 1 ${plantName} ? Très bon choix ✨`)
-    // }
-    function handleClick(e) {
-        console.log(`Ceci est mon event :`, e)
+export const PlantItem = ({ name, cover, light, water, price }) => {
+    function handleClick(plantName) {
+        console.log(`Vous voulez acheter 1 ${plantName} ? Très bon choix ✨`)
     }
 
     return (
-
-        <li key={id} className="lmj-plant-item" onClick={() => handleClick(name)}>
+        <li className="lmj-plant-item" onClick={() => handleClick(name)}>
+            <span className="lmj-plant-item-price">{price}€</span>
             <img className="lmj-plant-item-cover" src={cover} alt={`${name} cover`} />
             {name}
             <div>
