@@ -10,15 +10,13 @@ export const Footer = () => {
 
     function isNotEmail() {
         if (!inputValue.includes('@')) {
-            alert("Sans @, ce n'est pas une adresse mail !")
+            alert("Attention, il n'y a pas d'@, ceci n'est pas une adresse valide 😥")
         }
     }
 
     return (
         <footer className="lmj-footer">
-            <div className="lmj-footer-elem">
-                Pour les passionné·e·s de plantes 🌿🌱🌵
-            </div>
+            <p className="lmj-footer-elem">Pour les passionné·e·s de plantes 🌿🌱🌵</p>
             <div className="lmj-footer-elem">
                 <p>Laissez-nous votre mail :</p>
                 <form className="lmj-footer-form">
