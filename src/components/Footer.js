@@ -4,11 +4,11 @@ import '../styles/footer.css'
 export const Footer = () => {
     const [inputValue, setInputValue] = useState('')
 
-    function Input(event) {
+    const Input = (event) => {
         setInputValue(event.target.value)
     }
 
-    function isNotEmail() {
+    const isNotEmail = () => {
         if (!inputValue.includes('@')) {
             alert("Attention, il n'y a pas d'@, ceci n'est pas une adresse valide 😥")
         }

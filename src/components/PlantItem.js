@@ -2,7 +2,7 @@ import { CareScale } from './CareScale'
 import '../styles/plantItem.css'
 
 export const PlantItem = ({ name, cover, light, water, price }) => {
-    function handleClick(plantName) {
+    const handleClick = (plantName) => {
         console.log(`Vous voulez acheter 1 ${plantName} ? Très bon choix ✨`)
     }
 
