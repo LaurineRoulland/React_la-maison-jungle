@@ -4,7 +4,7 @@ import '../styles/cart.css'
 export const Cart = ({ cart, updateCart }) => {
     const [isOpen, setIsOpen] = useState(true)
     const total = cart.reduce(
-        (acc, plantType) => acc + plantType.amount * plantType.price,
+        (accumulator, plantType) => accumulator + plantType.amount * plantType.price,
         0
     )
     return isOpen ? (
