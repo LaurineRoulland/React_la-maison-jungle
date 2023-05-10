@@ -6,8 +6,10 @@ export const Categories = ({ setActiveCategory, categories, activeCategory }) =>
             <select
                 value={activeCategory}
                 onChange={(event) => setActiveCategory(event.target.value)}
-                className="lmj-categories-select">
+                className="lmj-categories-select"
+            >
                 <option value="">---</option>
+
                 {categories.map((category) => (
                     <option key={category} value={category}>
                         {category}
