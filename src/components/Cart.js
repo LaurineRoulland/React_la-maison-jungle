@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import '../styles/cart.css'
 
 export const Cart = ({ cart, updateCart }) => {
@@ -7,6 +7,14 @@ export const Cart = ({ cart, updateCart }) => {
         (accumulator, plantType) => accumulator + plantType.amount * plantType.price,
         0
     )
+
+    useEffect(() => {
+        alert(`J'aurai ${total}€ à payer 💸`)
+    }, [total])
+    useEffect(() => {
+        document.title = `LMJ: ${total}€ d'achats`
+    }, [total])
+
     return isOpen ? (
         <div className="lmj-cart">
             <button className="lmj-cart-toggle-button" onClick={() => setIsOpen(false)}>
@@ -22,7 +30,7 @@ export const Cart = ({ cart, updateCart }) => {
                             </div>
                         ))}
                     </ul>
-                    <h3>Total :{total}€</h3>
+                    <h3>Total : {total}€</h3>
                     <button onClick={() => updateCart([])}>Vider le panier</button>
                 </div>
             ) : (
