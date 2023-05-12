@@ -9,9 +9,6 @@ export const Cart = ({ cart, updateCart }) => {
     )
 
     useEffect(() => {
-        alert(`J'aurai ${total}€ à payer 💸`)
-    }, [total])
-    useEffect(() => {
         document.title = `LMJ: ${total}€ d'achats`
     }, [total])
 
@@ -20,6 +17,7 @@ export const Cart = ({ cart, updateCart }) => {
             <button className="lmj-cart-toggle-button" onClick={() => setIsOpen(false)}>
                 Fermer
             </button>
+
             {cart.length > 0 ? (
                 <div>
                     <h2>Panier</h2>
@@ -30,7 +28,9 @@ export const Cart = ({ cart, updateCart }) => {
                             </div>
                         ))}
                     </ul>
+
                     <h3>Total : {total}€</h3>
+
                     <button onClick={() => updateCart([])}>Vider le panier</button>
                 </div>
             ) : (
