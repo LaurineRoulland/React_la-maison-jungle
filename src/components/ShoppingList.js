@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import {  useState } from 'react'
 import { plantList } from '../datas/plantList'
 import { PlantItem } from './PlantItem'
 import { Categories } from './Categories'
@@ -14,6 +14,7 @@ export const ShoppingList = ({ cart, updateCart }) => {
         []
     )
 
+
     const addToCart = (name, price) => {
         const currentPlantSaved = cart.find((plant) => plant.name === name)
         if (currentPlantSaved) {
@@ -26,6 +27,7 @@ export const ShoppingList = ({ cart, updateCart }) => {
             updateCart([...cart, { name, price, amount: 1 }])
         }
     }
+
 
     return (
         <div className="lmj-shopping-list">
